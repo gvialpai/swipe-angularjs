@@ -1,6 +1,11 @@
 img {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
+}
+
+h2{
+  font-size: 2em;
+  color: orange;
 }
 
 html,
@@ -11,7 +16,7 @@ li {
 }
 
 body {
-    background: #FCD424; font: normal 16px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif;
+    background: #AAAAAA; font: normal 16px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif;
 }
 
 button,
@@ -37,7 +42,7 @@ input {
 }
 
 #viewport li {
-    width: 200px; height: 300px; list-style: none; background: #fff; border-radius: 5px; position: absolute; top: 0; left: 0; box-shadow: 0 0 2px rgba(0,0,0,.2), 1px 1px 1px rgba(0,0,0,.2); line-height: 300px; text-align: center; font-size: 10px; border: 10px solid #ECECEC; box-sizing: border-box; cursor: default;
+    width: 200px; height: 300px; list-style: none; background: #fff; border-radius: 5px; position: absolute; top: 0; left: 0; box-shadow: 0 0 2px rgba(0,0,0,.2), 1px 1px 1px rgba(0,0,0,.2); /*line-height: 300px;*/ text-align: center; font-size: 10px; border: 10px solid #FFFFFF; box-sizing: border-box; cursor: default;
 }
 
 #viewport li.clubs,
