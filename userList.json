@@ -1,0 +1,5 @@
+[
+{ "firstname": "Daffy", "lastname": "Duck", "rating": "****", "image": "daffy-profile.gif"},
+{ "firstname": "Bugs", "lastname": "Bunny", "rating": "*****", "image": "bugs-profile.gif"},
+{ "firstname": "Sam", "lastname": "Yosemite", "rating": "*", "image": "sam-profile.gif"}
+]
