@@ -1,30 +1,32 @@
 angular
-  .module('tinderTestApp')
-  .controller('UsersController', function($scope, $timeout, userList) {
-      userList.fetch().then(function(data) {
-          $scope.data = data;
-      })
-          $timeout(function(){
-            var stack;
+.module('tinderTestApp')
+.controller('UsersController', function($scope, $timeout, userList) {
+  userList.fetch().then(function(data) {
+    $scope.data = data;
+  })
+  $timeout(function(){
+    var stack;
 
-                      stack = gajus.Swing.Stack();
+    stack = gajus.Swing.Stack();
 
-                      [].forEach.call(document.querySelectorAll('.stack li'), function (targetElement) {
-                          stack.createCard(targetElement);
+    [].forEach.call(document.querySelectorAll('.stack li'), function (targetElement) {
+      stack.createCard(targetElement);
 
-                          targetElement.classList.add('in-deck');
-                      });
+      targetElement.classList.add('in-deck');
+    });
 
-                      stack.on('throwout', function (e) {
-                          console.log(e.target.innerText || e.target.textContent, 'has been thrown out of the stack to the', e.throwDirection == 1 ? 'right' : 'left', 'direction.');
+    stack.on('throwout', function (e) {
+      console.log(e.target.innerText || e.target.textContent, 'has been thrown out of the stack to the', e.throwDirection == 1 ? 'right' : 'left', 'direction.');
 
-                          e.target.classList.remove('in-deck');
-                      });
+      e.target.classList.remove('in-deck');
+      $(this).li.fadeOut();
 
-                      stack.on('throwin', function (e) {
-                          console.log(e.target.innerText || e.target.textContent, 'has been thrown into the stack from the', e.throwDirection == 1 ? 'right' : 'left', 'direction.');
+    });
 
-                          e.target.classList.add('in-deck');
-                      });
-          })
-  });
+    stack.on('throwin', function (e) {
+      console.log(e.target.innerText || e.target.textContent, 'has been thrown into the stack from the', e.throwDirection == 1 ? 'right' : 'left', 'direction.');
+
+      e.target.classList.add('in-deck');
+    });
+  })
+});
