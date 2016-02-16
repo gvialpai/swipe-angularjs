@@ -11,3 +11,4 @@ tinderTestApp.factory('userList', function($q, $timeout, $http) {
 
     return userList;
 });
+

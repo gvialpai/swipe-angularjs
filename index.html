@@ -12,11 +12,12 @@
 <body ng-controller="UsersController">
   <div id="viewport">
     <ul class="stack">
-
-      <li class="in-deck" ng-repeat="user in data">
-        <img ng-src="./css/elements/{{user.image}}">
-        <span>{{user.firstname}} {{user.lastname}}</span>
-        <span>{{user.rating}}</span>
+      <li ng-repeat="user in data">
+        <div class="swing-card">
+          <img ng-src="./css/elements/{{user.image}}">
+          <span>{{user.firstname}} {{user.lastname}}</span>
+          <span>{{user.rating}}</span>
+        </div>
       </li>
     </ul>
   </div>
